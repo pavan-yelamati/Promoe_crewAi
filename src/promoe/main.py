@@ -18,9 +18,9 @@ def run():
     inputs = {
         'message': 'creating images',
     }
-    
     try:
-        Promoe().crew().kickoff(inputs=inputs)
+        crew_output = Promoe().crew().kickoff(inputs=inputs)
+        print(f"Raw Output: {crew_output.raw}")
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
 

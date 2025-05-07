@@ -63,7 +63,6 @@ class Promoe():
     def prompt_enhancement_task(self) -> Task:
         return Task(
             config=self.tasks_config['prompt_enhancement_task'], # type: ignore[index]
-            output_file='report.md'
         )
 
     @crew
@@ -71,7 +70,6 @@ class Promoe():
         """Creates the Promoe crew"""
         # To learn how to add knowledge sources to your crew, check out the documentation:
         # https://docs.crewai.com/concepts/knowledge#what-is-knowledge
-
         return Crew(
             agents=self.agents, # Automatically created by the @agent decorator
             tasks=self.tasks, # Automatically created by the @task decorator
