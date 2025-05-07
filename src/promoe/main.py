@@ -2,8 +2,6 @@
 import sys
 import warnings
 
-from datetime import datetime
-
 from promoe.crew import Promoe
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
@@ -18,8 +16,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'AI LLMs',
-        'current_year': str(datetime.now().year)
+        'message': 'creating images',
     }
     
     try:
